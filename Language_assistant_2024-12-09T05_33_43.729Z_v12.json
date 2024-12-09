@@ -1,0 +1,289 @@
+{
+  "id": "5b60e60d-e0e4-43a6-8ffd-3673d06422ce",
+  "version": 12,
+  "is_active": true,
+  "is_template": false,
+  "name": "New Agent 2024-12-09T05:33:43.729Z",
+  "description": "",
+  "executions": [
+    {
+      "id": "bf3f5c3f-f61d-45e1-a721-b883a7bf357c",
+      "execution_id": "bf3f5c3f-f61d-45e1-a721-b883a7bf357c",
+      "started_at": "2024-12-09T06:03:50.989000Z",
+      "ended_at": "2024-12-09T06:03:56.288000Z",
+      "duration": 5.230713129043579,
+      "total_run_time": 1.4836442470550537,
+      "status": "COMPLETED"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "0c57b53b-df96-4f89-9984-20e6650a1229",
+      "block_id": "c0a8e994-ebf1-4a9c-a4d8-89d09c86741b",
+      "input_default": {
+        "name": "User Language",
+        "value": "English"
+      },
+      "metadata": {
+        "position": {
+          "x": -275.37522693407243,
+          "y": 164.33477303520294
+        }
+      },
+      "input_links": [],
+      "output_links": [
+        {
+          "id": "7e8fc6b5-a8dc-46a7-a826-266eccc8995a",
+          "source_id": "0c57b53b-df96-4f89-9984-20e6650a1229",
+          "sink_id": "b0db8359-6601-4f82-978e-04b9a48d6058",
+          "source_name": "result",
+          "sink_name": "value",
+          "is_static": true
+        }
+      ],
+      "webhook_id": null
+    },
+    {
+      "id": "0823183c-48e0-469b-854f-5fee24b36b1c",
+      "block_id": "1f292d4a-41a4-4977-9684-7c8d560b9f91",
+      "input_default": {
+        "model": "gpt-4-turbo",
+        "credentials": {
+          "id": "1d380b3c-88a7-4758-96b6-e32353b769d3",
+          "title": "GPT_key",
+          "provider": "openai",
+          "type": "api_key"
+        }
+      },
+      "metadata": {
+        "position": {
+          "x": 1026.124264148558,
+          "y": 657.2124428076847
+        }
+      },
+      "input_links": [
+        {
+          "id": "bc094c6f-248c-43b3-858f-6f1c943d7e95",
+          "source_id": "2464846b-470b-4d3c-90aa-eea2d0524d9b",
+          "sink_id": "0823183c-48e0-469b-854f-5fee24b36b1c",
+          "source_name": "updated_dictionary",
+          "sink_name": "prompt",
+          "is_static": false
+        }
+      ],
+      "output_links": [
+        {
+          "id": "f4b4ae4c-e55f-4cf9-9b59-3f1b9c36d380",
+          "source_id": "0823183c-48e0-469b-854f-5fee24b36b1c",
+          "sink_id": "a4c52f0f-68a1-4b82-928e-8e841c28c9c0",
+          "source_name": "response",
+          "sink_name": "value",
+          "is_static": false
+        }
+      ],
+      "webhook_id": null
+    },
+    {
+      "id": "b0db8359-6601-4f82-978e-04b9a48d6058",
+      "block_id": "31d1064e-7446-4693-a7d4-65e5ca1180d1",
+      "input_default": {
+        "key": "User Language"
+      },
+      "metadata": {
+        "position": {
+          "x": 304.5518642130238,
+          "y": 141.66676212276695
+        }
+      },
+      "input_links": [
+        {
+          "id": "7e8fc6b5-a8dc-46a7-a826-266eccc8995a",
+          "source_id": "0c57b53b-df96-4f89-9984-20e6650a1229",
+          "sink_id": "b0db8359-6601-4f82-978e-04b9a48d6058",
+          "source_name": "result",
+          "sink_name": "value",
+          "is_static": true
+        }
+      ],
+      "output_links": [
+        {
+          "id": "4768c5e0-5ed3-4d42-8398-c50f596d17df",
+          "source_id": "b0db8359-6601-4f82-978e-04b9a48d6058",
+          "sink_id": "2464846b-470b-4d3c-90aa-eea2d0524d9b",
+          "source_name": "updated_dictionary",
+          "sink_name": "dictionary",
+          "is_static": false
+        }
+      ],
+      "webhook_id": null
+    },
+    {
+      "id": "88a3d1a6-1ffa-41d1-8372-5b60febc0236",
+      "block_id": "c0a8e994-ebf1-4a9c-a4d8-89d09c86741b",
+      "input_default": {
+        "name": "User Input",
+        "value": "How to say good morning in French?"
+      },
+      "metadata": {
+        "position": {
+          "x": -273.02556385276984,
+          "y": 1105.4380663445188
+        }
+      },
+      "input_links": [],
+      "output_links": [
+        {
+          "id": "69ed0fd9-b574-4dd9-b6b2-15ce1dd57e04",
+          "source_id": "88a3d1a6-1ffa-41d1-8372-5b60febc0236",
+          "sink_id": "2464846b-470b-4d3c-90aa-eea2d0524d9b",
+          "source_name": "result",
+          "sink_name": "value",
+          "is_static": true
+        }
+      ],
+      "webhook_id": null
+    },
+    {
+      "id": "a4c52f0f-68a1-4b82-928e-8e841c28c9c0",
+      "block_id": "363ae599-353e-4804-937e-b2ee3cef3da4",
+      "input_default": {
+        "name": "Translation",
+        "description": "French translated output of user input"
+      },
+      "metadata": {
+        "position": {
+          "x": 1832.8671766585076,
+          "y": 655.0566242644912
+        }
+      },
+      "input_links": [
+        {
+          "id": "f4b4ae4c-e55f-4cf9-9b59-3f1b9c36d380",
+          "source_id": "0823183c-48e0-469b-854f-5fee24b36b1c",
+          "sink_id": "a4c52f0f-68a1-4b82-928e-8e841c28c9c0",
+          "source_name": "response",
+          "sink_name": "value",
+          "is_static": false
+        }
+      ],
+      "output_links": [],
+      "webhook_id": null
+    },
+    {
+      "id": "2464846b-470b-4d3c-90aa-eea2d0524d9b",
+      "block_id": "31d1064e-7446-4693-a7d4-65e5ca1180d1",
+      "input_default": {
+        "key": "User Input"
+      },
+      "metadata": {
+        "position": {
+          "x": 308.23208328518876,
+          "y": 947.8645796715386
+        }
+      },
+      "input_links": [
+        {
+          "id": "69ed0fd9-b574-4dd9-b6b2-15ce1dd57e04",
+          "source_id": "88a3d1a6-1ffa-41d1-8372-5b60febc0236",
+          "sink_id": "2464846b-470b-4d3c-90aa-eea2d0524d9b",
+          "source_name": "result",
+          "sink_name": "value",
+          "is_static": true
+        },
+        {
+          "id": "4768c5e0-5ed3-4d42-8398-c50f596d17df",
+          "source_id": "b0db8359-6601-4f82-978e-04b9a48d6058",
+          "sink_id": "2464846b-470b-4d3c-90aa-eea2d0524d9b",
+          "source_name": "updated_dictionary",
+          "sink_name": "dictionary",
+          "is_static": false
+        }
+      ],
+      "output_links": [
+        {
+          "id": "bc094c6f-248c-43b3-858f-6f1c943d7e95",
+          "source_id": "2464846b-470b-4d3c-90aa-eea2d0524d9b",
+          "sink_id": "0823183c-48e0-469b-854f-5fee24b36b1c",
+          "source_name": "updated_dictionary",
+          "sink_name": "prompt",
+          "is_static": false
+        }
+      ],
+      "webhook_id": null
+    }
+  ],
+  "links": [
+    {
+      "id": "bc094c6f-248c-43b3-858f-6f1c943d7e95",
+      "source_id": "2464846b-470b-4d3c-90aa-eea2d0524d9b",
+      "sink_id": "0823183c-48e0-469b-854f-5fee24b36b1c",
+      "source_name": "updated_dictionary",
+      "sink_name": "prompt",
+      "is_static": false
+    },
+    {
+      "id": "4768c5e0-5ed3-4d42-8398-c50f596d17df",
+      "source_id": "b0db8359-6601-4f82-978e-04b9a48d6058",
+      "sink_id": "2464846b-470b-4d3c-90aa-eea2d0524d9b",
+      "source_name": "updated_dictionary",
+      "sink_name": "dictionary",
+      "is_static": false
+    },
+    {
+      "id": "7e8fc6b5-a8dc-46a7-a826-266eccc8995a",
+      "source_id": "0c57b53b-df96-4f89-9984-20e6650a1229",
+      "sink_id": "b0db8359-6601-4f82-978e-04b9a48d6058",
+      "source_name": "result",
+      "sink_name": "value",
+      "is_static": true
+    },
+    {
+      "id": "f4b4ae4c-e55f-4cf9-9b59-3f1b9c36d380",
+      "source_id": "0823183c-48e0-469b-854f-5fee24b36b1c",
+      "sink_id": "a4c52f0f-68a1-4b82-928e-8e841c28c9c0",
+      "source_name": "response",
+      "sink_name": "value",
+      "is_static": false
+    },
+    {
+      "id": "69ed0fd9-b574-4dd9-b6b2-15ce1dd57e04",
+      "source_id": "88a3d1a6-1ffa-41d1-8372-5b60febc0236",
+      "sink_id": "2464846b-470b-4d3c-90aa-eea2d0524d9b",
+      "source_name": "result",
+      "sink_name": "value",
+      "is_static": true
+    }
+  ],
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "User Language": {
+        "secret": false,
+        "advanced": false,
+        "title": "User Language",
+        "default": "English"
+      },
+      "User Input": {
+        "secret": false,
+        "advanced": false,
+        "title": "User Input",
+        "default": "How to say good morning in French?"
+      }
+    },
+    "required": []
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "Translation": {
+        "secret": false,
+        "advanced": false,
+        "title": "Translation",
+        "description": "French translated output of user input"
+      }
+    },
+    "required": [
+      "Translation"
+    ]
+  }
+}
