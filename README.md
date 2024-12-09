@@ -1,4 +1,4 @@
-2.	Developed Language Learning Assistant using AutoGPT platform which helps translate given text from one language to another.
+Developed Language Learning Assistant using AutoGPT platform which helps translate given text from one language to another.
 •	Agent takes input from user which specified which language the user is planning to provide as an input.
 •	Another input provided by user is the actual text which they want to be translated (here to French language)
 
