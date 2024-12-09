@@ -1,16 +1,16 @@
-Developed Language Learning Assistant using AutoGPT platform which helps translate given text from one language to another.
+**Developed Language Learning Assistant using AutoGPT platform which helps translate given text from one language to another.**
 
 •	Agent takes input from user which specified which language the user is planning to provide as an input.
 
 •	Another input provided by user is the actual text which they want to be translated (here to French language)
 
-Observations:
+**Observations:**
 
 a.	Previously I created similar language assistant model using Langflow, and the main difference I observed was the number of blocks required on Autogpt was much higher than in Langflow. 
 
 b.	Also, Autogpt is providing a much finer control over the way the input prompt will be designed, used and modified before providing it to the actual LLM model.
 
-Details of blocks used:
+**Details of blocks used:**
 
 i.	Agent input blocks – used to collect information about user inputs. Here I used two block – one for specifying what input language user is using and other to specify the actual text which needs to be translated.
 
