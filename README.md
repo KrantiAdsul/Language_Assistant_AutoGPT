@@ -24,4 +24,5 @@ iv.	Agent Output blocks – to display output of the agents – here the transla
 
 **Dependencies:**
 
-You need to download and setup AutoGPT following steps listed on : https://agpt.co/blog/introducing-the-autogpt-platform
+You need to download and setup AutoGPT following steps listed on : https://agpt.co/blog/introducing-the-autogpt-platform and then import the project file to run on AutoGPT platform.
+Along with this user may also be required to add relevant API keys of the models being used.
