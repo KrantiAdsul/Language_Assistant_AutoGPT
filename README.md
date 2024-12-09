@@ -21,3 +21,7 @@ ii.	Add to dictionary block -  used to add a new key-value pair to the dictionar
 iii.	AI text generator block – used to call LLM model using the prompt generated here through ‘Add to dictionary block’ to generate required output string. LLM used here is again: GPT -4o.
 
 iv.	Agent Output blocks – to display output of the agents – here the translation of good morning in French i.e Bonjour!
+
+**Dependencies:**
+
+You need to download and setup AutoGPT following steps listed on : https://agpt.co/blog/introducing-the-autogpt-platform
